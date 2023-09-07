@@ -14,7 +14,7 @@ export PATH="$PATH:/Users/brandon/flutter/flutter/bin"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="/opt/homebrew/opt/php@8.1/bin:$PATH"
 export PATH="/opt/homebrew/opt/php@8.1/sbin:$PATH"
-
+export PATH="$PATH:/Users/brandon/go/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
