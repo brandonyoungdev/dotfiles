@@ -123,3 +123,4 @@ source $ZSH/oh-my-zsh.sh
 alias vim=nvim
 alias vi=nvim
 alias ls="colorls"
+alias gs="git status"
