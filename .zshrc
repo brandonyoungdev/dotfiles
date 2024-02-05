@@ -122,7 +122,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim=nvim
 alias vi=nvim
-alias ls="colorls"
 alias gp="git pull"
 alias gs="git status"
 alias gpo="git push origin"
