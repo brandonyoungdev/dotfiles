@@ -135,6 +135,9 @@ export EDITOR=nvim
 
 VI_MODE_SET_CURSOR=true
 
+# add keybind for control + n to open neovim
+bindkey -s "^N" "nvim\n"
+
 # set -o vi
 #
 # bindkey -v
