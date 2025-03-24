@@ -91,7 +91,7 @@ alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode docker docker-compose nvm npm ssh-agent 1password golang github colorize fzf laravel ripgrep zsh-interactive-cd zsh-navigation-tools history sudo tmux web-search yarn)
+plugins=(git vi-mode docker docker-compose nvm npm ssh-agent 1password golang github colorize fzf laravel ripgrep zsh-interactive-cd zsh-navigation-tools history sudo tmux web-search yarn zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -128,7 +128,7 @@ alias gpo="git push origin"
 alias cl="clear"
 alias cls="clear"
 
-alias cdg="cd ~/Documents/GitHub/"
+alias cdg="cd ~/GitHub/"
 
 # set nvim as the default EDITOR
 export EDITOR=nvim
