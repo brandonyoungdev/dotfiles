@@ -10,12 +10,17 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="/opt/homebrew/opt/php/bin:$PATH"
 export PATH="/opt/homebrew/opt/php/sbin:$PATH"
+export PATH="$HOME/.cargo/env:$PATH"
 export PATH="$PATH:/Users/brandon/flutter/flutter/bin"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="/opt/homebrew/opt/php@8.1/bin:$PATH"
 export PATH="/opt/homebrew/opt/php@8.1/sbin:$PATH"
 export PATH="$PATH:/Users/brandon/go/bin"
+export PATH="$PATH:/usr/bin/flutter/bin"
 
+export PATH="$PATH:/home/brandon/.config/composer"
+export PATH="$PATH:/home/brandon/.config/composer/vendor/bin"
+export ANDROID_HOME="/home/brandon/Android/Sdk/"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -27,6 +32,7 @@ ZSH_THEME="af-magic"
 
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 alias pest='vendor/bin/pest'
+alias pint='vendor/bin/pint'
 alias phpunit='vendor/bin/phpunit'
 
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
@@ -91,7 +97,33 @@ alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode docker docker-compose nvm npm ssh-agent 1password golang github colorize fzf laravel ripgrep zsh-interactive-cd zsh-navigation-tools history sudo tmux web-search yarn zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)
+plugins=(
+  git 
+  vi-mode 
+  docker 
+  docker-compose 
+  nvm 
+  npm
+  ssh-agent 
+  1password 
+  golang 
+  github 
+  colorize 
+  fzf 
+  laravel 
+  zsh-interactive-cd 
+  # zsh-navigation-tools 
+  fast-syntax-highlighting
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+  # zsh-autocomplete
+  fzf-tab
+  history 
+  sudo 
+  tmux 
+  # web-search 
+  # yarn 
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -129,6 +161,7 @@ alias cl="clear"
 alias cls="clear"
 
 alias cdg="cd ~/GitHub/"
+alias cdv="cd ~/Documents/Vault/"
 
 # set nvim as the default EDITOR
 export EDITOR=nvim
@@ -141,3 +174,32 @@ bindkey -s "^N" "nvim\n"
 # set -o vi
 #
 # bindkey -v
+#
+#
+
+# Turso
+export PATH="/home/brandon/.turso:$PATH"
+
+# place this after nvm initialization!
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+
+export XCURSOR_PATH=$RUNTIME/usr/share/icons
