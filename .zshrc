@@ -5,22 +5,26 @@ export PATH="$HOME/homebrew/bin:$PATH"
 alias pip=pip3
 alias dc=docker-compose
 
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="/opt/homebrew/opt/php/bin:$PATH"
 export PATH="/opt/homebrew/opt/php/sbin:$PATH"
 export PATH="$HOME/.cargo/env:$PATH"
-export PATH="$PATH:/Users/brandon/flutter/flutter/bin"
+export PATH="$PATH:$HOME/flutter/flutter/bin"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="/opt/homebrew/opt/php@8.1/bin:$PATH"
 export PATH="/opt/homebrew/opt/php@8.1/sbin:$PATH"
-export PATH="$PATH:/Users/brandon/go/bin"
+export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:/usr/bin/flutter/bin"
 
-export PATH="$PATH:/home/brandon/.config/composer"
-export PATH="$PATH:/home/brandon/.config/composer/vendor/bin"
-export ANDROID_HOME="/home/brandon/Android/Sdk/"
+export PATH="$PATH:$HOME/.local/share/nvim/mason/bin/"
+
+
+export PATH="$PATH:$HOME/.config/composer"
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
+export ANDROID_HOME="$HOME/Android/Sdk/"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -178,7 +182,7 @@ bindkey -s "^N" "nvim\n"
 #
 
 # Turso
-export PATH="/home/brandon/.turso:$PATH"
+export PATH="$HOME/.turso:$PATH"
 
 # place this after nvm initialization!
 autoload -U add-zsh-hook
