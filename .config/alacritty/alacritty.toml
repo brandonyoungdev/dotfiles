@@ -16,7 +16,7 @@ normal                = { family = "FiraCode Nerd Font", style = "Light" }
 bold                  = { family = "FiraCode Nerd Font", style = "Bold" }
 italic                = { family = "FiraCode Nerd Font", style = "Italic" }
 bold_italic           = { family = "FiraCode Nerd Font", style = "Bold Italic" }
-offset = { x = -2, y = 0 }
+offset = { x = -1, y = 0 }
 
 [env]
 term = "xterm-256color"
