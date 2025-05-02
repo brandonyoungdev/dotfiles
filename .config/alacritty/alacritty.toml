@@ -1,0 +1,35 @@
+[window]
+opacity = 0.95
+decorations = "none"
+
+[font]
+size = 18
+# normal = { family = "Fira Code", style = "Regular" }
+# normal                = { family = "Fira Code Nerd Font", style = "Light" }
+# bold                  = { family = "Fira Code Nerd Font", style = "Normal" }
+# italic                = { family = "Fira Code Nerd Font", style = "Italic" }
+# bold_italic           = { family = "Fira Code Nerd Font", style = "Bold Italic" }
+
+# normal                = { family = "Iosevka Term", style = "Light" }
+# bold                = { family = "Iosevka Term", style = "Bold" }
+normal                = { family = "FiraCode Nerd Font", style = "Light" }
+bold                  = { family = "FiraCode Nerd Font", style = "Bold" }
+italic                = { family = "FiraCode Nerd Font", style = "Italic" }
+bold_italic           = { family = "FiraCode Nerd Font", style = "Bold Italic" }
+offset = { x = -2, y = 0 }
+
+[env]
+term = "xterm-256color"
+
+[general]
+import = [
+    # "~/.config/alacritty/themes/themes/github_dark_default.toml"
+    # "~/.config/alacritty/themes/themes/campbell.toml"
+    "~/.config/alacritty/themes/themes/hyper.toml"
+    # "~/.config/alacritty/themes/themes/vscode.toml"
+    # "~/.config/alacritty/themes/themes/oxocarbon.toml"
+    # "~/.config/alacritty/themes/themes/github_dark_high_contrast.toml"
+]
+
+[terminal]
+shell = { program = "/bin/zsh", args = ["--login"] }
