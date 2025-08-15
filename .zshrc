@@ -114,17 +114,17 @@ plugins=(
   github 
   colorize 
   fzf 
-  laravel 
+  # laravel 
   zsh-interactive-cd 
   # zsh-navigation-tools 
   fast-syntax-highlighting
   zsh-syntax-highlighting
-  zsh-autosuggestions
+  # zsh-autosuggestions
   # zsh-autocomplete
   fzf-tab
   history 
-  sudo 
-  tmux 
+  # sudo 
+  # tmux 
   # web-search 
   # yarn 
 )
