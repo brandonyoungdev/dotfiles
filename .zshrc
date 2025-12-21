@@ -205,3 +205,6 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
 export XCURSOR_PATH=$RUNTIME/usr/share/icons
+
+# Created by `pipx` on 2025-09-10 01:55:15
+export PATH="$PATH:/Users/brandon/.local/bin"
