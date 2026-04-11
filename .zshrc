@@ -208,3 +208,17 @@ export XCURSOR_PATH=$RUNTIME/usr/share/icons
 
 # Created by `pipx` on 2025-09-10 01:55:15
 export PATH="$PATH:/Users/brandon/.local/bin"
+export PATH="/usr/local/opt/postgresql@15/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/brandon/.lmstudio/bin"
+# End of LM Studio CLI section
+
+
+if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+    RPS1="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+    if (( $+functions[virtualenv_prompt_info] )); then
+      RPS1+='$(virtualenv_prompt_info)'
+    fi
+    RPS1+=" ${FG[237]}%n@%m%{$reset_color%}"
+fi
