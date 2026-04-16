@@ -2,8 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Homebrew
-export HOMEBREW_PREFIX="$HOME/homebrew"
-eval "$($HOMEBREW_PREFIX/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Languages & runtimes
 export PATH="$HOME/.cargo/env:$PATH"
